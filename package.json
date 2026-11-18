@@ -7,7 +7,10 @@
     "dev": "vite --host 0.0.0.0",
     "typecheck": "vue-tsc --noEmit",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "test:e2e": "node tests/viewer.e2e.mjs",
+    "test:unit": "node tests/unit.viewer.mjs",
+    "test": "npm run typecheck && npm run test:unit && npm run test:e2e"
   },
   "dependencies": {
     "lucide-vue-next": "^0.468.0",
@@ -16,6 +19,9 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.0",
     "@vue/compiler-sfc": "^3.5.0",
+    "pixelmatch": "^6.0.0",
+    "playwright": "^1.65.1",
+    "pngjs": "^7.0.0",
     "typescript": "~5.7.3",
     "vite": "^6.0.0",
     "vue-tsc": "^2.2.0"

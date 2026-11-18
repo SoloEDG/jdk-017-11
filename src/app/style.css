@@ -725,3 +725,56 @@ footer b {
     line-height: 1.8;
   }
 }
+
+/* --- offline interactive artwork export --- */
+.publish-gap {
+  margin-top: 18px;
+}
+.text-field {
+  width: 100%;
+  border: 1px solid #e2e7dd;
+  background: #fafcf8;
+  border-radius: 6px;
+  padding: 10px 9px;
+  color: #566a59;
+  font-size: 11px;
+  outline-color: #5b8a65;
+}
+.text-field::placeholder {
+  color: #adb5aa;
+}
+.size-estimate {
+  margin-top: 18px;
+  border: 1px solid #e2e9dd;
+  background: #f6faf4;
+  border-radius: 8px;
+  padding: 12px;
+  color: #6b7b68;
+}
+.size-estimate > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  color: #8a9787;
+}
+.size-estimate strong {
+  margin-left: auto;
+  font-size: 13px;
+  color: #3d6f52;
+  font-weight: 600;
+}
+.size-estimate p {
+  margin: 8px 0 0;
+  font-size: 9px;
+  line-height: 1.75;
+  color: #98a296;
+}
+.publish-summary {
+  margin-top: 10px;
+}
+.size-warning {
+  color: #9a6a2f;
+  border-top: 1px dashed #e4d9c2;
+  padding-top: 7px;
+}

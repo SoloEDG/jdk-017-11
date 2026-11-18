@@ -34,3 +34,26 @@ export interface RenderSnapshot {
   projection: Projection;
   edge: Edge;
 }
+
+export type RendererPreference = "auto" | "gpu" | "software";
+export type ArtworkFormat = "webp" | "jpeg" | "png";
+
+export interface PublishSettings {
+  title: string;
+  width: number;
+  format: ArtworkFormat;
+  quality: number;
+  renderer: RendererPreference;
+}
+
+export interface ArtworkPayload {
+  version: 1;
+  title: string;
+  image: { dataUrl: string; width: number; height: number };
+  projection: Projection;
+  edge: Edge;
+  renderer: RendererPreference;
+  createdAt: string;
+  /** Author-view JPEG used only when interactive rendering fails. */
+  poster?: string;
+}

@@ -4,7 +4,7 @@ import { AssetPanel } from "../features/asset";
 import { ProjectionPanel } from "../features/projection";
 import { ViewportPanel, ViewControls } from "../features/viewport";
 import { EdgePanel } from "../features/edge";
-import { ExportPanel } from "../features/export";
+import { ExportPanel, PublishPanel } from "../features/export";
 import { useStudio } from "./useStudio";
 const doc = useStudio();
 </script>
@@ -18,8 +18,8 @@ const doc = useStudio();
         ></a
       >
       <div class="top-center">让你的世界，自成一颗星球 <span>✦</span></div>
-      <a class="top-action" href="#export-panel"
-        >导出作品 <ArrowUpRight :size="16"
+      <a class="top-action" href="#publish-panel"
+        >导出互动作品 <ArrowUpRight :size="16"
       /></a>
     </header>
     <div class="breadcrumb">
@@ -40,7 +40,7 @@ const doc = useStudio();
       <aside class="right-sidebar">
         <ViewControls :doc="doc" /><EdgePanel :doc="doc" /><ExportPanel
           :doc="doc"
-        />
+        /><PublishPanel :doc="doc" />
       </aside>
     </div>
     <footer>
